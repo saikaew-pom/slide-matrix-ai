@@ -12,22 +12,19 @@ Configured for Production and Development:
 
 - `NEXT_PUBLIC_SUPABASE_URL`
 - `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`
+- `MINIMAX_API_KEY`
 - `MINIMAX_MODEL`
 - `SLIDEMATRIX_ENABLE_DEV_AUTH=false`
-- `CLOUDINARY_UPLOAD_FOLDER`
-
-Not configured yet:
-
-- `MINIMAX_API_KEY`
 - `CLOUDINARY_CLOUD_NAME`
 - `CLOUDINARY_API_KEY`
 - `CLOUDINARY_API_SECRET`
+- `CLOUDINARY_UPLOAD_FOLDER`
 
-Without `MINIMAX_API_KEY`, blueprint generation uses the mock fallback. Without Cloudinary credentials, uploads fall back to local browser-only material handling.
+Preview branch variables are not configured yet. Production and Development are ready.
 
 ## Supabase Production Auth Settings
 
-In Supabase, set the production app URL before testing magic-link sign-in:
+Supabase is configured with:
 
 - Site URL: `https://slide-matrix-ai.vercel.app`
 - Redirect URL: `https://slide-matrix-ai.vercel.app/auth/callback`
