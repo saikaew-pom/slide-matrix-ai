@@ -1,0 +1,64 @@
+{
+  "brand": {
+    "name": "SlideMatrixAI",
+    "tagline": "Presentation Engine"
+  },
+  "hero": {
+    "eyebrow": "AI Presentation Strategist",
+    "headline": "Turn messy business notes into persuasive presentation blueprints.",
+    "subheadline": "Upload notes, PDFs, CSVs, or screenshots. SlideMatrixAI creates a structured report, sales deck, or startup pitch outline in minutes.",
+    "primaryCta": "Generate your first blueprint",
+    "secondaryCta": "View example"
+  },
+  "deckModes": [
+    {
+      "id": "report",
+      "label": "Business Report",
+      "subtitle": "Inform and recommend",
+      "framework": "SCQA + Minto Pyramid",
+      "description": "For updates, analysis, recommendations, and internal decisions."
+    },
+    {
+      "id": "sales",
+      "label": "Sales Deck",
+      "subtitle": "Persuade and win buy-in",
+      "framework": "5M Mission Flow",
+      "description": "For proposals, products, services, and client persuasion."
+    },
+    {
+      "id": "pitch",
+      "label": "Startup Pitch",
+      "subtitle": "Sell the vision",
+      "framework": "10-Slide Pitch Structure",
+      "description": "For investors, accelerators, partners, and venture storytelling."
+    }
+  ],
+  "supportedFiles": ["PDF", "CSV", "TXT", "PNG", "JPG"],
+  "workflowSteps": [
+    "Choose deck type",
+    "Define audience",
+    "Describe problem",
+    "Add materials",
+    "Clarify outcome",
+    "Review blueprint"
+  ],
+  "exampleSlides": [
+    {
+      "number": "01",
+      "step": "Situation",
+      "title": "Q4 revenue missed target by 12%, but the recovery path is concentrated in three controllable levers.",
+      "bullets": ["Pricing leakage explains 44% of the gap", "Two segments still grew despite market softness", "A 60-day sales motion reset can recover the run rate"],
+      "data": "Comparison -> Bullet graph",
+      "layout": "Z-pattern"
+    },
+    {
+      "number": "02",
+      "step": "Answer",
+      "title": "Approve the sales reset now to protect $1.4M in projected annual revenue.",
+      "bullets": ["Prioritize enterprise renewal risk", "Reduce discount exceptions", "Move low-converting channels to nurture"],
+      "data": "Change -> Line graph",
+      "layout": "Chart-first"
+    }
+  ],
+  "qualitySignals": ["Clear key message", "3-Box filter applied", "Chart recommendation", "Speaker notes separated"]
+}

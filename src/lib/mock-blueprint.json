@@ -1,0 +1,89 @@
+{
+  "keyMessage": "A focused sales reset can protect $1.4M in projected annual revenue before the Q4 gap compounds.",
+  "presentationType": "report",
+  "framework": {
+    "name": "SCQA + Minto Pyramid",
+    "reason": "The brief asks leadership to make a business decision, so the report should lead with the answer and support it with grouped evidence."
+  },
+  "audienceStrategy": {
+    "role": "Executive",
+    "communicationStyle": "Analytical",
+    "currentBelief": "The miss is mainly caused by market softness.",
+    "desiredBelief": "The largest recovery levers are pricing discipline and sales process control.",
+    "desiredAction": "Approve a 60-day pricing and sales motion reset."
+  },
+  "deckQualityChecks": [
+    { "label": "Clear key message", "status": "pass", "message": "The decision recommendation is explicit." },
+    { "label": "Audience alignment", "status": "pass", "message": "Executive and analytical preferences bias the output toward answer-first logic and ROI." },
+    { "label": "3-Box filter", "status": "pass", "message": "Decision-critical points stay on slides; calculations move to notes." },
+    { "label": "CTA", "status": "pass", "message": "The requested decision is concrete and time-bound." }
+  ],
+  "slides": [
+    {
+      "slideNumber": 1,
+      "frameworkStep": "Situation",
+      "assertionTitle": "Q4 revenue missed target by 12%, but the recovery path is concentrated in three controllable levers.",
+      "bodyBullets": [
+        "Pricing leakage explains 44% of the revenue gap",
+        "Enterprise renewals remain strong despite market softness",
+        "Channel conversion fell fastest where discount exceptions increased"
+      ],
+      "dataVisualization": {
+        "chartType": "Bullet graph",
+        "reason": "Actual revenue should be compared directly against target.",
+        "visualCoding": "Use gray for target range and clay for actual revenue gap."
+      },
+      "layoutRecommendation": "Z-pattern: bullet graph left, three executive points right",
+      "visualPrompt": null,
+      "speakerNotes": "Move detailed segment-level revenue bridge and sales rep variance to appendix. Emphasize that market softness is a factor, but not the largest controllable cause.",
+      "slideQualityChecks": [
+        { "label": "Assertion title", "status": "pass", "message": "Title states the insight, not a topic." },
+        { "label": "Bullet discipline", "status": "pass", "message": "Three supporting points only." }
+      ]
+    },
+    {
+      "slideNumber": 2,
+      "frameworkStep": "Complication",
+      "assertionTitle": "Discount exceptions are widening the gap faster than pipeline volume can repair it.",
+      "bodyBullets": [
+        "Exception rate rose from 18% to 31%",
+        "Average contract value fell 9% in affected segments",
+        "Pipeline coverage masks margin pressure"
+      ],
+      "dataVisualization": {
+        "chartType": "Line graph",
+        "reason": "The exception rate is changing over time.",
+        "visualCoding": "Keep prior months gray and highlight the last three months in clay."
+      },
+      "layoutRecommendation": "Chart-first layout with a short implication block",
+      "visualPrompt": null,
+      "speakerNotes": "If challenged, explain that volume recovery without pricing control increases activity but not profitable revenue.",
+      "slideQualityChecks": [
+        { "label": "One core message", "status": "pass", "message": "Slide focuses only on discount exceptions." },
+        { "label": "Chart fit", "status": "pass", "message": "Line graph matches change-over-time data." }
+      ]
+    },
+    {
+      "slideNumber": 3,
+      "frameworkStep": "Answer-First",
+      "assertionTitle": "Approve a 60-day sales reset to recover the run rate and protect $1.4M ARR.",
+      "bodyBullets": [
+        "Lock discount exceptions behind manager approval",
+        "Prioritize enterprise renewal risk accounts",
+        "Move low-converting channels into nurture"
+      ],
+      "dataVisualization": {
+        "chartType": "Bar chart",
+        "reason": "The recovery levers should be compared by projected ARR impact.",
+        "visualCoding": "Use gray for smaller levers and clay for the largest lever."
+      },
+      "layoutRecommendation": "Three-column action layout with impact bar",
+      "visualPrompt": null,
+      "speakerNotes": "The ask is approval to run the reset now, not approval of a permanent org change. Include owner and weekly review cadence in appendix.",
+      "slideQualityChecks": [
+        { "label": "CTA", "status": "pass", "message": "Decision request is clear and time-bound." },
+        { "label": "Evidence placement", "status": "pass", "message": "Detailed operating cadence stays in notes." }
+      ]
+    }
+  ]
+}

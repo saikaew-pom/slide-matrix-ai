@@ -1,0 +1,39 @@
+{
+  "steps": [
+    { "id": "type", "label": "Deck type" },
+    { "id": "audience", "label": "Audience" },
+    { "id": "problem", "label": "Problem" },
+    { "id": "materials", "label": "Materials" },
+    { "id": "outcome", "label": "Outcome" },
+    { "id": "generate", "label": "Generate" }
+  ],
+  "deckTypes": [
+    {
+      "id": "report",
+      "label": "Business Report",
+      "framework": "SCQA + Minto Pyramid",
+      "description": "Create an answer-first report for analysis, recommendations, and decisions."
+    },
+    {
+      "id": "sales",
+      "label": "Sales Deck",
+      "framework": "5M Mission Flow",
+      "description": "Create a persuasive deck for proposals, services, products, and buy-in."
+    },
+    {
+      "id": "pitch",
+      "label": "Startup Pitch",
+      "framework": "10-Slide Pitch Structure",
+      "description": "Create a vision deck for investors, accelerators, partners, and fundraising."
+    }
+  ],
+  "audienceRoles": ["Executive", "Doer", "Client", "Learner"],
+  "communicationStyles": ["Analytical", "Intuitive", "Functional", "Personal"],
+  "fileTypes": ["PDF", "CSV", "TXT", "PNG", "JPG"],
+  "placeholders": {
+    "problem": "Example: Q4 revenue missed target by 12%, and leadership needs a clear recovery plan.",
+    "materials": "Paste notes, metrics, meeting summaries, or source context here.",
+    "before": "Example: They think the issue is mainly market slowdown.",
+    "after": "Example: They approve a 60-day pricing and sales process reset."
+  }
+}
