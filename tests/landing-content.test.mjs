@@ -354,4 +354,11 @@ test("saved project detail page can copy or export a markdown blueprint", async 
   assert.match(detailClientSource, /Export Markdown/);
   assert.match(detailClientSource, /Slide-by-slide blueprint/);
   assert.match(detailClientSource, /Speaker notes/);
+  assert.match(detailClientSource, /AI-generated visual prompts/);
+  assert.match(detailClientSource, /buildVisualPromptMarkdown/);
+  assert.match(detailClientSource, /buildFallbackVisualPrompt/);
+  assert.match(detailClientSource, /5W1H visual context/);
+  assert.match(detailClientSource, /7-element prompt/);
+  assert.match(detailClientSource, /Quality, subject, front detail, styling, action, background, lighting/);
+  assert.match(detailClientSource, /slide\.visualPrompt/);
 });

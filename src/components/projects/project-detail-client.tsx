@@ -359,10 +359,57 @@ function buildProjectMarkdown(project: ProjectDetail) {
       "",
       `**Speaker notes:** ${slide.speakerNotes}`,
       "",
+      ...buildVisualPromptMarkdown(project, slide),
+      "",
     ]),
   ];
 
   return `${lines.join("\n").trim()}\n`;
+}
+
+function buildVisualPromptMarkdown(project: ProjectDetail, slide: Blueprint["slides"][number]) {
+  const existingVisualPrompt = String(slide.visualPrompt ?? "").trim();
+  const prompt = existingVisualPrompt || buildFallbackVisualPrompt(project, slide);
+
+  return [
+    "**AI-generated visual prompts:**",
+    "",
+    `**5W1H visual context:** Who = ${project.audience_role} buyer or stakeholder; What = ${slide.assertionTitle}; Where = ${inferVisualSetting(project.deck_type)}; When = current business decision moment; Why = ${project.key_message}; How = ${slide.layoutRecommendation}.`,
+    "",
+    "**Prompt framework:** Quality, subject, front detail, styling, action, background, lighting.",
+    "",
+    `**7-element prompt:** ${prompt}`,
+    "",
+    "**Usage note:** Use this for an image, mockup, or concept visual only when it clarifies the slide better than a chart or simple diagram.",
+  ];
+}
+
+function buildFallbackVisualPrompt(project: ProjectDetail, slide: Blueprint["slides"][number]) {
+  const chartContext = slide.dataVisualization.chartType
+    ? `with a subtle ${slide.dataVisualization.chartType.toLowerCase()} visual motif`
+    : "with a clean strategic visual motif";
+
+  return [
+    "Ultra-realistic, editorial business presentation visual",
+    `${project.audience_role.toLowerCase()} stakeholder reviewing ${project.deck_type} strategy`,
+    "focused, confident expression",
+    "modern professional styling with neutral tones and one clay-colored highlight",
+    `actively evaluating the insight: ${slide.assertionTitle}`,
+    `${inferVisualSetting(project.deck_type)} ${chartContext}`,
+    "soft directional light, premium SaaS-style composition, high clarity, no text overlays",
+  ].join(", ");
+}
+
+function inferVisualSetting(deckType: string) {
+  if (deckType === "sales") {
+    return "a polished client meeting room";
+  }
+
+  if (deckType === "pitch") {
+    return "a high-energy startup pitch room";
+  }
+
+  return "an executive boardroom";
 }
 
 async function copyTextToClipboard(value: string) {
